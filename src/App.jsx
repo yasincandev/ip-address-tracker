@@ -31,24 +31,18 @@ function App() {
 
   return (
     <>
-      <div className='header'>
-        <Search
-          handleSubmit={handleSubmit}
-          search={search}
-          setSearch={setSearch}
-          getIpData={getIpData}
-        />
-      </div>
-      <div className='main'>
-        <Data data={ipData} location={location} firstLocation={firstLocation} />
-      </div>
-      <div className='map_container'>
-        <MapComponent
-          data={ipData}
-          location={location}
-          firstLocation={firstLocation}
-        />
-      </div>
+      <Search
+        handleSubmit={handleSubmit}
+        search={search}
+        setSearch={setSearch}
+        getIpData={getIpData}
+      />
+      <Data data={ipData} location={location} firstLocation={firstLocation} />
+      <MapComponent
+        data={ipData}
+        location={location}
+        firstLocation={firstLocation}
+      />
     </>
   );
 }

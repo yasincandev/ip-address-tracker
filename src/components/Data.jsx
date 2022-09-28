@@ -1,5 +1,3 @@
-import React from 'react';
-
 const Data = ({ data, location, firstLocation }) => {
   return (
     <div
@@ -14,7 +12,6 @@ const Data = ({ data, location, firstLocation }) => {
           {location ? data.ip : firstLocation.ip}
         </p>
       </div>
-
       <div className='lg:border-r lg:border-slate-400 p-6'>
         <h2 className='text-sm uppercase text-slate-600'>Location</h2>
         <p className='font-bold text-slate-900 text-2xl'>
@@ -23,14 +20,12 @@ const Data = ({ data, location, firstLocation }) => {
             : `${firstLocation.city}, ${firstLocation.region_code} `}
         </p>
       </div>
-
       <div className='lg:border-r lg:border-slate-400 p-6'>
         <h2 className='text-sm uppercase text-slate-600'>Timezone</h2>
         <p className='font-bold text-slate-900 text-xl'>
           {location ? data.timezone : firstLocation.timezone}
         </p>
       </div>
-
       <div className='p-6'>
         <h2 className='text-sm uppercase text-slate-600'>ISP</h2>
         <p className='font-bold text-slate-900 text-2xl'>
@@ -42,13 +37,3 @@ const Data = ({ data, location, firstLocation }) => {
 };
 
 export default Data;
-
-/* 
-<p>{location ? data.ip : firstLocation.ip}</p>
- <p>
-          {location
-            ? `${data.city}, ${data.region_code} ${data.postal}`
-            : `${firstLocation.city}, ${firstLocation.region_code} ${firstLocation.postal}`}
-        </p>
- <p>UTC {location ? data.timezone : firstLocation.timezone}</p>
- <p>{location ? data.org : firstLocation.org}</p>*/

@@ -1,4 +1,3 @@
-import React from 'react';
 import background from '../images/pattern-bg.png';
 import arrow from '../images/icon-arrow.svg';
 
@@ -12,7 +11,6 @@ const Search = ({ handleSubmit, search, setSearch, getIpData }) => {
         <h1 className='font-bold text-2xl lg:text-3xl text-white pb-8 text-center'>
           IP Address Tracker
         </h1>
-
         <form onSubmit={handleSubmit} className='w-full flex'>
           <input
             type='text'
